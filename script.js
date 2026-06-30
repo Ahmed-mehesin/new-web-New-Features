@@ -198,9 +198,9 @@ function hideResults() {
 }
 
 function changeBackground(pipeType) {
-    [hdpeBackground, upvcBackground, pprBackground, pphBackground].forEach(b => b.classList.remove('active','hdpe-fallback','upvc-fallback','ppr-fallback','pph-fallback'));
+    [hdpeBackground, upvcBackground, pprBackground, pphBackground].forEach(b => b.classList.remove('active','hdpe-fallback','ppr-fallback','pph-fallback'));
     const map = { HDPE: [hdpeBackground, 'https://misrelhegaz.com/ar/wp-content/uploads/2020/08/HDPE-Pipes.jpg', 'hdpe-fallback'],
-                  UPVC: [upvcBackground, 'https://nile-drip.com/wp-content/uploads/2023/07/nile-drip-pipes-%D9%85%D9%88%D8%A7%D8%B3%D9%8A%D8%B1-%D8%B5%D8%B1%D9%81-%D8%B5%D8%AD%D9%8A-%D9%86%D8%A7%D9%8A%D9%84-%D8%AF%D8%B1%D9%8A%D8%A8-Niledrip-hwa-1024x729.jpg', 'upvc-fallback'],
+                  UPVC: [upvcBackground, 'https://www.jiashangpipe.com/wp-content/uploads/2024/07/UPVC-PIPE.jpg'],
                   PPR: [pprBackground, 'https://misrelhegaz.com/ar/wp-content/uploads/2020/08/Main-Image.jpg', 'ppr-fallback'],
                   PPH: [pphBackground, 'https://image2url.com/r2/default/images/1770106809713-b43029d8-a8df-4a55-9e5b-34a2ba8c745a.jpg', 'pph-fallback'] };
     if (map[pipeType]) {
