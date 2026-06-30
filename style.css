@@ -1,11 +1,11 @@
 :root {
-    --primary: #2d6a6f;
-    --secondary: #8a9b6e;
+    --primary: #1e3a5f;
+    --secondary: #2563eb;
     --accent: #c17a52;
-    --dark: #2b2d2e;
-    --light: #f7f6f3;
-    --gray: #6b6f70;
-    --border: #e2e0db;
+    --dark: #202124;
+    --light: #ffffff;
+    --gray: #f8f9fa;
+    --border: #dadce0;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Montserrat', sans-serif; background-color: var(--light); color: var(--dark); line-height: 1.6; overflow-x: hidden; position: relative; }
@@ -13,15 +13,15 @@ body { font-family: 'Montserrat', sans-serif; background-color: var(--light); co
 .pipe-background { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0; z-index: -1; transition: opacity 1.5s ease-in-out; }
 .pipe-background.active { opacity: 0.8; }
 .pipe-background.hdpe { background-image: url('https://misrelhegaz.com/ar/wp-content/uploads/2020/08/HDPE-Pipes.jpg'); }
-.pipe-background.upvc { background-image: url('https://nile-drip.com/wp-content/uploads/2023/07/nile-drip-pipes-%D9%85%D9%88%D8%A7%D8%B3%D9%8A%D8%B1-%D8%B5%D8%B1%D9%81-%D8%B5%D8%AD%D9%8A-%D9%86%D8%A7%D9%8A%D9%84-%D8%AF%D8%B1%D9%8A%D8%A8-Niledrip-hwa-1024x729.jpg'); }
+.pipe-background.upvc { background-image: url('https://www.jiashangpipe.com/wp-content/uploads/2024/07/UPVC-PIPE.jpg'); }
 .pipe-background.ppr { background-image: url('https://misrelhegaz.com/ar/wp-content/uploads/2020/08/Main-Image.jpg'); }
-.pipe-background.pph { background-image: url('https://image2url.com/r2/default/images/1770106809713-b43029d8-a8df-4a55-9e5b-34a2ba8c745a.jpg'); }
+.pipe-background.pph { background-image: url('https://imgg.io/images/2026/06/30/670bbc30d72d6263c8baad74b806e33c.jpg'); }
 .pipe-background.hdpe-fallback { background: linear-gradient(135deg, #2c3e50, #4ca1af); }
-.pipe-background.upvc-fallback { background: linear-gradient(135deg, #34495e, #7f8c8d); }
+
 .pipe-background.ppr-fallback { background: linear-gradient(135deg, #16a085, #2980b9); }
 .pipe-background.pph-fallback { background: linear-gradient(135deg, #16a085, #2980b9); }
 
-.welcome-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, var(--primary), var(--secondary)); display: flex; justify-content: center; align-items: center; z-index: 9999; animation: fadeOut 1.5s ease-in-out 2.5s forwards; }
+.welcome-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #0f1f33 0%, #1e3a5f 50%, #2563eb 100%); display: flex; justify-content: center; align-items: center; z-index: 9999; animation: fadeOut 1.5s ease-in-out 2.5s forwards; }
 .welcome-content { text-align: center; color: white; animation: zoomIn 1s ease-out; }
 .welcome-content h1 { font-size: 4rem; font-weight: 700; margin-bottom: 20px; letter-spacing: 2px; text-shadow: 0 2px 10px rgba(0,0,0,0.2); }
 .welcome-content p { font-size: 1.5rem; font-weight: 300; animation: slideUp 0.8s ease-out 0.3s forwards; opacity: 0; }
@@ -31,7 +31,7 @@ body { font-family: 'Montserrat', sans-serif; background-color: var(--light); co
 .main-content { opacity: 0; animation: fadeIn 1s ease-out 3s forwards; position: relative; z-index: 1; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 20px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); animation: slideDown 0.6s ease-out; position: relative; z-index: 2; }
+header { background: linear-gradient(135deg, #0f1f33, #1e3a5f); color: white; padding: 20px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); animation: slideDown 0.6s ease-out; position: relative; z-index: 2; }
 .header-content { display: flex; justify-content: space-between; align-items: center; }
 .logo { display: flex; align-items: center; gap: 15px; }
 .logo img { height: 3.5rem; width: auto; object-fit: contain; animation: pulse 2s infinite; }
