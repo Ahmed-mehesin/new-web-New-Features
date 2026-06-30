@@ -97,7 +97,7 @@ tr:hover td { background-color: rgba(45,106,111,0.05); }
 .technical-data-btn:hover, .fittings-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(45,106,111,0.4); }
 .technical-data-btn:active, .fittings-btn:active { transform: translateY(-1px); }
 
-.pricing-section { background-color: rgba(240,247,255,0.9); backdrop-filter: blur(5px); border-radius: 8px; padding: 20px; margin-top: 80px; border: 1px solid var(--border); opacity: 0; transform: translateY(10px); }
+.pricing-section { background-color: rgba(240,247,255,0.9); backdrop-filter: blur(5px); border-radius: 8px; padding: 20px; margin-top: 90px; border: 1px solid var(--border); opacity: 0; transform: translateY(10px); }
 
 /* ====== TOOLS DROPDOWN ====== */
 .tools-dropdown-wrapper { position: relative; }
@@ -261,7 +261,7 @@ tr:hover td { background-color: rgba(45,106,111,0.05); }
 .quotation-table-wrapper { overflow-x: auto; padding: 20px; }
 .quotation-table { width: 100%; border-collapse: collapse; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; }
 .quotation-table thead tr { background-color: #e8eeed; }
-.quotation-table thead th { padding: 13px 14px; text-align: left; font-weight: 700; color: var(--primary); border-bottom: 2px solid var(--primary); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.4px; white-space: nowrap; }
+.quotation-table thead th { padding: 13px 14px; text-align: left; font-weight: 700; color: var(--light); border-bottom: 2px solid var(--primary); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.4px; white-space: nowrap; }
 .quotation-table tbody tr { border-bottom: 1px solid var(--border); transition: background 0.2s; }
 .quotation-table tbody tr:hover { background-color: rgba(45,106,111,0.04); }
 .quotation-table tbody td { padding: 13px 14px; vertical-align: middle; }
@@ -311,7 +311,7 @@ tr:hover td { background-color: rgba(45,106,111,0.05); }
 footer { display: flex; justify-content: space-between; background-color: var(--dark); color: white; padding: 30px 0; text-align: center; margin-top: 60px; animation: fadeIn 1s ease-out 0.5s forwards; position: relative; z-index: 2; }
 .footer-content p { margin-bottom: 10px; }
 .footer-content .contact-info { font-size: 0.9rem; color: #bbb; }
-.signature { font-size: 1.1rem; font-weight: 500; color: white; }
+.signature { font-size: 1.1rem; font-weight: 500; color: var(--accent); }
 
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
