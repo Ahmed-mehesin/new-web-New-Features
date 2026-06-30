@@ -109,7 +109,7 @@ tr:hover td { background-color: rgba(45,106,111,0.05); }
     cursor: pointer; transition: all 0.3s ease;
     font-family: 'Montserrat', sans-serif;
 }
-.tools-btn:hover { background-color: var(--primary); color: var(--primary); transform: translateY(-3px); box-shadow: 0 6px 20px rgba(45,106,111,0.25); }
+.tools-btn:hover { background-color: var(--primary); color: white; transform: translateY(-3px); box-shadow: 0 6px 20px rgba(45,106,111,0.25); }
 .tools-btn-caret { font-size: 0.75rem; transition: transform 0.25s ease; }
 .tools-dropdown-wrapper.open .tools-btn-caret { transform: rotate(180deg); }
 
@@ -117,12 +117,12 @@ tr:hover td { background-color: rgba(45,106,111,0.05); }
     position: absolute; top: calc(100% + 10px); left: 0;
     background: white; border-radius: 12px; min-width: 220px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 1px solid var(--border);
-    padding: 10px 0; z-index: 60; overflow: hidden;
+    padding: 10px 0; z-index: 100; overflow: hidden;
     animation: slideDown 0.25s ease-out;
 }
 .tools-dropdown-label {
     font-size: 0.72rem; font-weight: 700; letter-spacing: 1px;
-    color: var(--gray); padding: 6px 20px 10px; text-transform: uppercase;
+    color: var(--primary); padding: 6px 20px 10px; text-transform: uppercase;
 }
 .tools-dropdown-item {
     display: block; width: 100%; text-align: left;
