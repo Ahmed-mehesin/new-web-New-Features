@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Al Rowad for Plastic Pipes - HDPE, UPVC, PPR, PPH pipe specifications calculator and price quotation tool.">
+    <title>PIPE SPECS</title>
+    <link rel="icon" type="image/png" href="https://image2url.com/r2/default/images/1770041250310-ad4260b4-cad5-4916-b71b-3c58d5dc968a.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="hdpeBackground" class="pipe-background hdpe"></div>
+    <div id="upvcBackground" class="pipe-background upvc"></div>
+    <div id="pprBackground" class="pipe-background ppr"></div>
+    <div id="pphBackground" class="pipe-background pph"></div>
+
+    <div class="welcome-overlay">
+        <div class="welcome-content">
+            <div class="welcome-icon">
+                <img src="https://image2url.com/r2/default/images/1770041250310-ad4260b4-cad5-4916-b71b-3c58d5dc968a.png" alt="Pipes Logo">
+            </div>
+            <h1>Welcome</h1>
+            <p>Al Rowad for Plastic Pipes</p>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <img src="https://image2url.com/r2/default/images/1770041250310-ad4260b4-cad5-4916-b71b-3c58d5dc968a.png" alt="Pipes Logo">
+                        <div>
+                            <h1>PIPE SPECS</h1>
+                            <div class="tagline"> Pipe Specifications</div>
+                        </div>
+                    </div>
+                    <div class="tagline">HDPE • UPVC • PPR • PPH</div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <div class="app-container">
+                    <div class="app-header">
+                        <h2>Pipe Specification</h2>
+                        <p>Select pipe type, diameter and Pressure to get specifications</p>
+                    </div>
+                    <div class="app-body">
+                        <div class="form-group">
+                            <label for="pipeType">Select Pipe Type</label>
+                            <select id="pipeType">
+                                <option value="">-- Choose Pipe Type --</option>
+                                <option value="HDPE">HDPE (DIN 8074/8075)</option>
+                                <option value="UPVC">UPVC (DIN 8061/8062)</option>
+                                <option value="PPR">PPR (DIN 8077/8078)</option>
+                                <option value="PPH">PPH (DIN 1451)</option>
+                            </select>
+                        </div>
+
+                        <div id="pipeDetails" class="hidden">
+                            <div class="pipe-type">
+                                <i class="fas fa-cogs"></i>
+                                <h3 id="selectedPipeType"></h3>
+                            </div>
+
+                            <div id="technicalDataContainer" class="technical-data-container hidden">
+                                <div class="button-group">
+                                    <button id="technicalDataBtn" class="technical-data-btn">
+                                        <i class="fas fa-file-alt"></i>
+                                        <span>View Technical Data &amp; Catalog</span>
+                                    </button>
+                                    <button id="fittingsBtn" class="fittings-btn hidden">
+                                        <i class="fas fa-tools"></i>
+                                        <span>HDPE Fittings</span>
+                                    </button>
+                                    <div class="tools-dropdown-wrapper" id="toolsDropdownWrapper">
+                                        <button id="toolsBtn" class="tools-btn">
+                                            <i class="fas fa-toolbox"></i>
+                                            <span>Tools</span>
+                                            <i class="fas fa-chevron-down tools-btn-caret"></i>
+                                        </button>
+                                        <div class="tools-dropdown-menu hidden" id="toolsDropdownMenu">
+                                            <div class="tools-dropdown-label">TOOLS</div>
+                                            <button class="tools-dropdown-item" data-tool="flow">Flow Calculator</button>
+                                            <button class="tools-dropdown-item" data-tool="comparison">Pipe Comparison</button>
+                                            <button class="tools-dropdown-item" data-tool="unit">Unit Converter</button>
+                                            <button class="tools-dropdown-item" data-tool="pressure">Pressure Loss</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="options-container">
+                                <div class="form-group">
+                                    <label for="diameter">Select Diameter (mm)</label>
+                                    <select id="diameter">
+                                        <option value="">-- Choose Diameter --</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pressure" id="pressureLabel">Select Pressure (PN)</label>
+                                    <select id="pressure">
+                                        <option value="">-- Choose Pressure --</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Pricing Section for HDPE and UPVC -->
+                            <div id="pricingSection" class="pricing-section hidden">
+                                <h3><i class="fas fa-calculator"></i> Pipe Pricing </h3>
+                                <div id="priceInputContainer"></div>
+                            </div>
+
+                            <div id="result" class="result-container hidden">
+                                <h3>Specifications</h3>
+                                <div class="result-content">
+                                    <div class="table-container">
+                                        <table id="specTable">
+                                            <tbody id="tableBody"></tbody>
+                                        </table>
+                                    </div>
+                                    <div class="image-box hidden" id="diagramImageBox">
+                                        <img src="https://z-cdn-media.chatglm.cn/files/08a8325f-cbbd-4ecc-bcc0-39be6e391a29_%D9%84%D9%82%D8%B7%D8%A9%20%D8%A7%D9%84%D8%B4%D8%A7%D8%B4%D8%A9%202025-09-22%20213256.png?auth_key=1790102022-4f7a501c5a2d4c878510c0f099f83d1c-0-baf3186c84f062280fd6169ee59eeed9" alt="Pipe Dimensions Diagram">
+                                        <div class="image-caption">Pipe Dimensions Diagram</div>
+                                    </div>
+                                </div>
+                                <!-- Add to Quotation button — HDPE/UPVC only -->
+                                <div class="add-to-quote-btn-wrapper" id="addToQuoteBtnWrapper" style="display:none;">
+                                    <button class="add-to-quote-btn" id="addToQuoteBtn">
+                                        <i class="fas fa-plus-circle"></i>
+                                        Add to Quotation
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--  QUOTATION BUILDER SECTION  -->
+                        <div id="quotationSection" class="quotation-section hidden" style="margin-top:40px;">
+                            <div class="quotation-section-header">
+                                <h3><i class="fas fa-file-invoice-dollar"></i> Quotation Summary</h3>
+                                <button class="clear-quote-btn" onclick="clearQuotation()">
+                                    <i class="fas fa-trash-alt"></i> Clear All
+                                </button>
+                            </div>
+                            <div class="quotation-table-wrapper">
+                                <table class="quotation-table" id="quotationTable">
+                                    <thead>
+                                        <tr>
+                                            <th class="item-num-col">#</th>
+                                            <th>Description</th>
+                                            <th>Qty (m)</th>
+                                            <th>Unit Price (EGP/m)</th>
+                                            <th>Total (EGP) incl. Tax</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="quotationTableBody"></tbody>
+                                </table>
+                            </div>
+                            <div class="quote-actions">
+                                <button class="print-pdf-btn" onclick="generateQuotationPDF()">
+                                    <i class="fas fa-file-pdf"></i>
+                                    Print / Export Full Quotation PDF
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <p> Pipe Specifications</p>
+                    <p>Al Rowad for Plastic Pipes</p>
+                    <p class="contact-info">Industrial Zone B1, 10th of Ramadan City, Egypt</p>
+                    <p class="signature">Created by ENG. AHMED MEHESIN c@2025</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- TOOL MODAL CONTAINER -->
+    <div id="toolModalOverlay" class="tool-modal-overlay hidden">
+        <div class="tool-modal-box">
+            <div class="tool-modal-header">
+                <h3 id="toolModalTitle">Tool</h3>
+                <button class="tool-modal-close" id="toolModalClose"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="tool-modal-body" id="toolModalBody"></div>
+        </div>
+    </div>
+
+    <!-- PRINT AREA -->
+    <div id="printArea"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
